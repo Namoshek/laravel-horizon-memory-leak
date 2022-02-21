@@ -5,6 +5,9 @@ This repository contains a demo of the `Stopwatch` memory leak in [`laravel/hori
 The `master` branch shows that with each executed queue job, the `Stopwatch::$timers` array increases in size.
 It also shows that nested jobs run with `Bus::dispatchSync($innerJob)` do not create `$timers`.
 
+The `with-fix-for-memory-leak` branch includes the fix from
+[`namoshek/horizon`](https://github.com/laravel/horizon/compare/ff534ce86fa27623d49da8a4272d3301b7998e6f...Namoshek:fix-stopwatch-memory-leak).
+
 ## How to run
 
 1. Run a locally available Redis instance, e.g. using `docker run --rm -it -p 6379:6379 redis:latest`
