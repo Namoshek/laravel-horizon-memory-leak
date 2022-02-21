@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2a5ada9cf224b9bd6344f5d313ea163c",
+    "content-hash": "1f12cfa3cd341c86cafc86809ae140bf",
     "packages": [
         {
             "name": "brick/math",
@@ -1152,17 +1152,11 @@
         },
         {
             "name": "laravel/horizon",
-            "version": "v5.9.1",
+            "version": "dev-fix-stopwatch-memory-leak",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laravel/horizon.git",
-                "reference": "fbe7e80a0aacb596984c66415afcae357f0231f2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/laravel/horizon/zipball/fbe7e80a0aacb596984c66415afcae357f0231f2",
-                "reference": "fbe7e80a0aacb596984c66415afcae357f0231f2",
-                "shasum": ""
+                "url": "https://github.com/namoshek/horizon.git",
+                "reference": "3de33858a1bc9d181aee29e2fb120384d926e2f6"
             },
             "require": {
                 "ext-json": "*",
@@ -1206,7 +1200,11 @@
                     "Laravel\\Horizon\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Laravel\\Horizon\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "MIT"
             ],
@@ -1221,11 +1219,7 @@
                 "laravel",
                 "queue"
             ],
-            "support": {
-                "issues": "https://github.com/laravel/horizon/issues",
-                "source": "https://github.com/laravel/horizon/tree/v5.9.1"
-            },
-            "time": "2022-02-14T17:22:27+00:00"
+            "time": "2022-02-21T19:08:06+00:00"
         },
         {
             "name": "laravel/sanctum",
@@ -7882,7 +7876,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "laravel/horizon": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
