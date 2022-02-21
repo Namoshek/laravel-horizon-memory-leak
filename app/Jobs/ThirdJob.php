@@ -17,6 +17,8 @@ class ThirdJob implements ShouldQueue
      */
     public function handle()
     {
-        Log::debug('The third job is run.');
+        Log::debug('The third job throws an exception.');
+
+        throw new \Exception('Oh no!');
     }
 }
